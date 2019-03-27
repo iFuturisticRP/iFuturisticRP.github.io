@@ -1,0 +1,182 @@
+{
+  "settings": {
+    "name": "FuturisticRP",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "mobirise4",
+      "title": "Mobirise 4",
+      "styling": {
+        "primaryColor": "#149dcc",
+        "secondaryColor": "#ff3366",
+        "successColor": "#F7ED4A",
+        "infoColor": "#82786E",
+        "warningColor": "#879A9F",
+        "dangerColor": "#B1A374",
+        "mainFont": "Rubik",
+        "display1Font": "Righteous",
+        "display1Size": 4.25,
+        "display2Font": "Rubik",
+        "display2Size": 3,
+        "display5Font": "Pacifico",
+        "display5Size": "1.8",
+        "display7Font": "Rubik",
+        "display7Size": 1,
+        "display4Font": "Rubik",
+        "display4Size": 1,
+        "isRoundedButtons": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#000000",
+        "#1e1e1e"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "4.9.7",
+    "siteFonts": [
+      {
+        "css": "'Pacifico', handwriting",
+        "name": "Pacifico",
+        "url": "https://fonts.googleapis.com/css?family=Pacifico:400"
+      },
+      {
+        "css": "'Righteous', display",
+        "name": "Righteous",
+        "url": "https://fonts.googleapis.com/css?family=Righteous:400"
+      }
+    ],
+    "uniqCompNum": 0,
+    "versionPublish": "4.9.7",
+    "screenshot": "screenshot.png",
+    "favicon": "@PROJECT_PATH@/assets/images/logo-gmod-128x128.png",
+    "noImageResize": ""
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "FuturisticRP",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "H1": {
+              "text-align": "right"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "text-align": "right"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<section group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n         'mbr-fullscreen': fullScreen,\n         'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/garrys-1920x1080.jpg\" selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#073B4C\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container align-center\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title mbr-bold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\">\n                    FuturisticRP\n                </h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubTitle\">\n                    Beautiful mobile websites\n                </h3>\n                <p class=\"mbr-text pb-3 mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">\n                    Tornando sua vida em segundo plano!</p>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-white-outline\" href=\"index.html\" data-app-placeholder=\"Type Text\"><span class=\"socicon socicon-discord mbr-iconfont mbr-iconfont-btn\"></span>DISCORD</a> <a class=\"btn btn-md btn-white-outline\" href=\"index.html\" data-app-placeholder=\"Type Text\"><span class=\"socicon socicon-vimeo mbr-iconfont mbr-iconfont-btn\"></span>COMPRAR VIP</a></div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_cid": "rlJiNXcaPP",
+          "_anchor": "header2-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "background-color": "@bgColor",
+            ".line": {
+              "background-color": "@lineColor",
+              "color": "@lineColor",
+              "align": "center",
+              "height": "2px",
+              "margin": "0 auto"
+            },
+            ".section-text": {
+              "padding": "2rem 0"
+            },
+            ".inner-container": {
+              "margin": "0 auto"
+            },
+            "@media (max-width: 768px)": {
+              ".inner-container": {
+                "width": "100% !important"
+              }
+            }
+          },
+          "_name": "content10",
+          "_customHTML": "<section class=\"mbr-section article content10\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Text Width\" name=\"innerWidth\" min=\"50\" max=\"100\" step=\"1\" value=\"100\">\n        <input type=\"range\" inline title=\"Line Width\" name=\"lineLength\" min=\"10\" max=\"100\" step=\"1\" value=\"100\">\n        <input type=\"color\" title=\"Line Color\" name=\"lineColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#1e1e1e\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"inner-container\" mbr-style=\"{'width': innerWidth + '%'}\">\n            <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\">\n            <div class=\"section-text align-center mbr-white mbr-fonts-style\" mbr-theme-style=\"display-2\" data-app-selector=\".section-text\" mbr-text><b>\n                    REGRAS</b></div>\n            <hr class=\"line\" mbr-style=\"{'width': lineLength + '%'}\">\n        </div>\n    </div>\n</section>",
+          "_cid": "rlJombYjKH",
+          "_anchor": "content10-3",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background": "linear-gradient(45deg, @bg-value, @color2)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "text-align": "left"
+            },
+            ".mbr-text, .mbr-section-btn B": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "header5",
+          "_customHTML": "<section class=\"header5\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\">\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#1e1e1e\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"color\" name=\"color2\" title=\"Color2\" value=\"#1e1e1e\" condition=\"bg.type=='color'\" selected>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"row justify-content-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\"><b>\n                    FuturisticRP\n                </b></h1>\n                <p class=\"mbr-text align-center display-5 pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">1º Seja respeitoso com todos os jogadores fora do RP.\n<br>2º Qualquer ameaça ou intenção de prejudicar outros jogadores na comunidade resultará em uma punição permanente.\n<br>3º Não reclame das decisões de equipe no jogo ou no bate-papo global. Apelações ou relatórios podem ser feitas no discord.\n<br>4º Na moeda do jogo não pode ser vendido ou negociado para itens da vida real, moeda ou créditos\n<br>5º Evitar punições por qualquer meio é proibido.\n<br>Qualquer um que for pego ou encorajando outras pessoas a violar regras terá uma punição igual ou maior à violação da regra.\n<br>6º Tenha bom senso&nbsp;<br><br><br><br><b>RP RULES</b><br><b>Random Death Match (RDM)</b><br><br>Jogadores que prejudicam diretamente sua vida, propriedade e / ou liberdade podem ser mortos sem aviso prévio.\n<br>Raids e hits podem ser completados matando sem aviso.\n<br>Todos os outros casos exigem um aviso válido de 10 segundos, incluindo um conjunto claro de instruções, entregues por meio de bate-papo digitado. É responsabilidade total da pessoa que está dando o aviso para garantir que todos os alvos estejam cientes do aviso. Se o alvo completou as instruções na íntegra, você não pode matá-las. A ação a ser completada e o tempo que eles têm para completar a ação mencionada devem ser incluídos em todas as advertências de 10 segundos para que a advertência seja válida.<br><br>➥ As advertências do grupo só serão autorizadas para advertências de 10 segundos de licença.\n<br>➥ Exemplo: Drop 1k ou die você tem 10 segundos. | Deixe ou morra você tem 10 segundos.<br><br>☛ Se um alvo do qual uma ação de advertência e / ou indução está sendo direcionada também mostra intenção hostil OU ignorância da instrução, tal como, mas não limitado a, especificamente retirar uma arma (e não o contrário), escapar, retirar o estojo uma arma, etc., então a ação pode ser instantânea.<br><br>➥ Exemplos de ações indutoras: Stunningicking, Raping, Mugging, Slapping Pimp, e etc<br><br>☛ O prefeito não pode ser morto durante a prefeitura Grace por qualquer motivo. Prefeitos A graça é anulada pelo prefeito que executa qualquer coisa relacionada a RP além do que é feito automaticamente (como leis padrão).<br><br>➥ Você também não pode acampar no gabinete do prefeito durante sua graça com o propósito de matá-lo depois.<br><br><b>Metagaming</b><br><br>☛ Seu personagem não pode usar informações além de seu conhecimento e além de sua vida atual. Isto inclui, mas não se limita a qualquer forma de vingança matando, mandando, querendo, ou rebaixando<br><br><b>Mortes</b><br><br>☛ Você pode atacar estabelecimentos, que não tenha +3 pessoas sobre quem você está invadindo<br><br><b>Gangues Organizações</b><br><br>☛ &nbsp;Após criar uma gangue/organização ou entrar você devera mudar seu nome RP para o da gangue exemplo:  |MS13|leoziNs isso tabem é aplicado para policiais\n<br>☛ &nbsp;Gangues: podem invadir bases,assaltar pessoas,sequestrar\n<br>☛ &nbsp;Organizações: geralmente usada por jobs governamentais como policiais,prefeitos etc\n<br>☛ &nbsp;Caso você queira a tag de sua gangue/organização no chat taxa de apenas R$ 2,00 Reais\n<br>☛ &nbsp;Tabem temos o npc privado de armas skins e facas. o npc ficara em uma parte do mapa e apenas membros de sua gangue ou organização podem comprar esses items. Custo R$ 50,00 Reais.<br><br><b>Props e Entidades</b><br><br>☛ Prop / entidade / Porta spamming, bloqueio, escalada, surf e minging não é permitido.\n<br>☛ Não crie props / move props dentro das bases de outros jogadores, não o faça durante os ataques e não o faça dentro de um evento do servidor.\n<br>☛ Construir bases anormalmente grandes ou outras estruturas de restrição de RP (ou seja, coisas que bloqueiam a estrada) resultarão em warn ou kick.\n<br>☛ Você não pode usar sua arma física em veículos. A menos que o veículo esteja preso (isto é, não possa se mover), não há exceções a essa regra.<b><br></b><br><b>Baseando-se e Construindo</b><br><br>☛ Você pode ter um sinal de construção (usando a tela de texto) para isolar e proteger-se do mundo RP, desde que você não possua raidables, e você não esteja envolvido em role-play. Deve ser removido quando terminar.\n<br>☛ A quantidade máxima de portas de desvanecimento por base é de três.\n<br>☛ A quantidade máxima de portas personalizadas por base é três.\n<br>☛ Uma keypad para uma porta que se desvanece deve ser claramente identificável.\n<br>☛ Bases não podem forçar os jogadores a se agachar, pular, agachar ou andar com precisão em qualquer local.\n<br>☛ Bases não podem ser flutuantes ou impossíveis de entrar.\n<br>☛ Pontes de desvanecimento e construções celestes não são permitidas.\n<br>☛ Entradas de base, bem como o layout interno geral, devem ser absolutamente claras e concisas. (isto é, labirintos, armadilhas, quebra-cabeças, etc.)\n<br>☛ Você não pode construir em qualquer lugar nas proximidades do principal ponto de interseção na frente do spawn, nem pode construir em qualquer lugar nas calçadas imediatamente adjacentes às entradas\n<br><br><b>RP Relation</b><br><br>☛ Você é livre para proteger jogadores com quem você tem relacionamento RP (a primeira regra do RDM se estende a essas pessoas).\n<br>☛ Formas de se relacionar com RP:<b><br></b><br>➥ Job / Class - Isso tem precedência sobre todas as outras relações RP. Você também deve seguir todas as regras da classe antes de considerar a relação RP.\n<br>➥ Possuir a mesma base - Você só pode proteger aqueles nas proximidades de sua base.\n<br>➥ Organização - Uma gangue pode ser feita por  1KK dentro do game\n<br>➥ Contratado / Trabalhando Juntos - Você deve ser contratado através do F4, ou ter o nome do seu trabalho definido como: / job \"com pessoa / nome da gangue aqui *\"\n<br>➥ Customer Relationship - Ao realizar sua transação você tem RP com seu cliente\n<br><br><b>Raiding, Mugging, e o Hostage Taking</b><br><br>☛ Você (os player que tivem junto com você) devem aguardar 10 minutos antes de executar essas ações na mesma pessoa, base, empresa ou organização. Isto não se aplica aos policiais que re-atacam bases por infrações ilegais ou jogadores saqueando da prisão por meio de fuga.\n<br>☛ Você deve advertir quaisquer ações tomadas em outros jogadores<br><br><b>Assalto</b><br><br>☛ Máximo $ 25.000. para a job Gangster Crips maximo 45.000\n<br>☛ Deve conceder às vítimas 10 segundos para obrigar a menos que estejam escapando\n<br>☛ Qualquer sinal de intenção hostil da vítima (tirar armamento) é KOS, isso NÃO inclui se a vítima já tem uma arma Fora.\n<br>☛ Quaisquer sinais de limpeza clara e clara das tentativas de fuga da vítimaKOS\n<br><br><b>Invadindo</b><br><br>☛ Depois de completar seu ataque, você deve sair imediatamente. Você não pode ocupar a base.\n<br>☛ Deixar a zona de ataque em qualquer ponto durante a raid ativa o seu raid timer, e você pode não voltar.\n<br>☛ Se é óbvio que não há raids em uma base, você não pode invadir.\n<br>☛ Você pode invadir pontos de verificação para desmantelar seu propósito.<br><br><b>REGRAS DE CLASSE\n</b><br>\n<br>☛ Toda classe tem sua relação RP, habilidade de atacar, capacidade de assaltar e habilidade de fazer reféns listados em suas descrições.<br><br><b>Demotes</b><br><br>☛ Demotes são apenas para pessoas que não cumpram os objetivos de um determinado trabalho. Cenários únicos para avisos podem ser fornecidos nas regras de classe abaixo.\n<br>☛ Se um membro da equipe estiver on-line, não rebaixe para violações de regra do servidor.<br><br><b>Regras do governo</b><br><br>☛ Na DP, o prefeito tem a palavra final sobre as defesas do prédio. Se eles renunciarem a esse direito, então ele é passado para civil.\n<br>☛ O prefeito não pode estabelecer leis que permitam violações de regras ou impedir a dramatização de papéis (incluindo qualquer lei que restrinja a construção).\n<br>☛ O prefeito não pode concorrer ao próximo voto de prefeito se tiver mudado de emprego a médio prazo.<br><br><b>Regras Específicas da Polícia:</b><br><br>☛ Polícia deve prender em vez de matar após dar um aviso válido de 5 segundos. A\n<br>☛ Polícia pode ser solicitada a deixar o interior de uma base e / ou parar de impedir uma porta / saída legalmente e sem risco para a outra parte. eles correm risco de warn justo.\n<br>☛ A polícia deve apenas querer / autorizar um indivíduo fora de infrações definidas e visíveis. Uma exceção inclui anúncios que exibem hits explícitos e / ou impressoras.\n<br>☛ A polícia deve conceder indivíduos avisos claros no chat durante lockdowns\n<br>polícia pode prender pessoas depois do lobby PD ou KOS-los se eles estão armados comintenções hostis\n<br>☛ A políciapodem recorrer a KOS se um aparentemente inofensivo criminoso procurado tira armamento depois de ter sido queria\n<br>☛ A polícia só pode construir postos de controle se autorizado pelaMayor\n<br>☛ Polícianão pode colocar itens ilegais dentro de uma base para prendê-los ou garanti-los A\n<br>☛ Polícia só pode atacar com um mandado A\n<br>☛ Polícia não pode atacar criminosos\n<br>☛ Se um jogador for procurado, a polícia deve fazer qualquer tentativa de prendê-lo. armado com intenção hostil. Não confunda isso com a polícia absolutamente ter que reconhecer o crime, eles têm todo o direito de ser corruptos e ignorá-lo.\n<br><br><b>Motivos para o rebaixamento incluem:</b><br><br>☛ Violação de leis personalizadas. No entanto, eles podem ser imunes a leis e hierarquia sempre que possam proibi-los de exercer suas funções.\n<br>☛ Estabelecendo leis que dão tratamento especial a uma determinada pessoa ou grupo\n<br>☛ Recebendo pagamento por mudanças legais\n<br>☛ Recusando-se a aplicar as leis\n<br>☛ Insubordinação (Não obedecendo a ordens legais dadas por cargos de liderança)<br></p>\n                <div class=\"mbr-section-btn align-center\" mbr-buttons mbr-theme-style=\"display-4\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n                        <a class=\"btn btn-md btn-secondary\" href=\"https://mobirise.co\">LEARN MORE</a>\n                        <a class=\"btn btn-md btn-white-outline\" href=\"https://mobirise.co\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_cid": "rlJk9TgAPe",
+          "_anchor": "header5-2",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            }
+          },
+          "_name": "footer6",
+          "_customHTML": "<section group=\"Footers\" global once=\"footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"1\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background5.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#232323\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"col-12\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\" data-app-placeholder=\"Type Text\">\n                    © Copyright © 2019 FuturisticRP - Todos os direitos reservados<br>&nbsp;◆ ◆ ◆ Designer By: &nbsp;LeoziN_Dallmonse\n                </p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rlJpDpbwuL",
+          "_anchor": "footer6-4",
+          "_protectedParams": [],
+          "_global": true,
+          "_once": "footers",
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
